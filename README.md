@@ -40,7 +40,7 @@ There are two ways to create REACT Element.
 
 1. Using React.createElement Method
 
-    ```
+```
         const title = React.createElement(
             'h1',
             {},
@@ -48,16 +48,16 @@ There are two ways to create REACT Element.
         );
 
         ReactDOM.render(
-           title,
+            title,
             document.getElementById('root');
         )
 
-        ```
+```
 
 
 2.  Using JSX(Javascript as XML) - TAG Based Syntax
 
-        ```
+```
         ReactDOM.render(
             <div>
                 <h1>Welcome</h1>
@@ -68,7 +68,7 @@ There are two ways to create REACT Element.
 
         )
 
-        ```
+```
 
 
 ### React Component ###
@@ -78,20 +78,61 @@ There are two ways to create REACT Element.
 
 ```
 class Message extends React.Component {
+   
+    getMyName = function() {
+     return "Hi There!!!"
+    }
+
     render() {
 
         return (
             <div> 
-                Hello Everyone!!!
+                Hello {this.props.name}
+                Function {this.getMyName}
             </div>
         )
     }
 }
 
-ReactDOM.render(<Message />,document.getElementById('root'));
+ReactDOM.render(<Message name="BHOPAL" />,document.getElementById('root'));
 
 ```
+
+2. Create a component as a Function.
+
+```
+const getMyName = function() {
+    return "Hi There!!!"
+}
+const Message = (props) => {
+
+    return (
+            <div> 
+                Hello {props.name}
+                Function {getMyName}
+            </div>
+        )
+}
+
+ReactDOM.render(<Message />,document.getElementById('root'));
+
+
+```
+
+
+
+
+
+
+**JSX allow us to access dynamic data by using "this.props" object.
 
 Note : 
     -   All the REACT Components have "render()" method which describes what would be the body of the component.
     -   React Component name should be Capitalize/UpperCase letter to distinguish between regular JSX element and React Element.
+    - If we use Class Component then we this.props would contain all the properties passed from the component.
+    - In case of Function compoment, we do not have the access of "this", hence we need to pass the "props" reference or can use "desctructing"
+    example :
+    //properties - props.name, props.age
+    const Message = (props) => {
+        
+    const Message = ({name, age}) => {
