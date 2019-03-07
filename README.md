@@ -427,6 +427,8 @@ Alternate of the above syntax is:
 
 **DefaultProps**
 The defaults values to be used in case the state or prop objet in null or empty.
+This is used to supply default values when other values are not provided. Basically, to save the app
+from breaking in case of data is not available.
 
 ```
 Class Syntax - Use the static property provided
@@ -454,6 +456,32 @@ const Book = ({title="No Title Provided", author= "No Author", pages=0, freeBook
 }
 
 
-
-
 ```
+
+**PropTypes**
+Sometimes we expect sepecfic Property Types to be passed in our component. Using propTypes, we can 
+ensure that correct type of data is passed to the component. To use this 
+
+1. First we need to import "PropType" 
+    import PropTypes from "prop-types"
+
+2. Npm install
+    npm install prop-types
+
+3. Add the prop types condition for any component
+
+    Library.propTypes = {
+        books : PropTypes.array,
+    }
+
+    Book.propTypes = {
+        title : PropTypes.string,
+        author : PropTypes.string,
+        pages : PropTypes.number,
+        freeBookmark : PropTypes.bool
+    }
+
+4. You are done. :)
+
+
+
