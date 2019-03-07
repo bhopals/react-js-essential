@@ -6,6 +6,9 @@
 
 #### React is a JavaScript Library that is used to build User Interfaces. With React we can create reusable components, and these component displays data as it changes over time. ### 
 
+The Prime reason that react is very popular is because of its Component Based Structure.
+It helps us to create nested collection of component to render the screen or user interface.
+
 
 
 ### React Start ###
@@ -32,8 +35,7 @@ dependecy installed .
     -   react-script : transpiling of new syntax, also the WEBPack and other behind the scene things 
 
     
-
-**React Component** 
+### React Elements ###
 There are two ways to create REACT Element. 
     -   Using React.createElement Method
 
@@ -66,3 +68,29 @@ There are two ways to create REACT Element.
         )
 
         ```
+
+
+### React Component ###
+
+
+1. Create React Component using ES6 Class Syntax.
+
+```
+class Message extends React.Component {
+    render() {
+
+        return (
+            <div> 
+                Hello Everyone!!!
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<Message />,document.getElementById('root'));
+
+```
+
+Note : 
+    -   All the REACT Components have "render()" method which describes what would be the body of the component.
+    -   React Component name should be Capitalize/UpperCase letter to distinguish between regular JSX element and React Element.
