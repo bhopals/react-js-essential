@@ -8,7 +8,6 @@ let bookList = [
 	{"title": "Cat's Cradle", "author": "Kurt Vonnegut", "pages": 304}
 ]
 
-
 const Book = ({title, author, pages, freeBookmark}) => {
 	return (
 		<section>
@@ -36,6 +35,14 @@ class Library extends React.Component {
 		open: true,
 		freeBookmark: false,
 		hiring: true
+	}
+
+	componentDidMount() {
+		console.log("The component is now mounted!")
+	}
+
+	componentDidUpdate() {
+		console.log("The component just updated")
 	}
 
 	toggleOpenClosed = () => {

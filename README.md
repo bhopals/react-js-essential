@@ -329,3 +329,28 @@ Alternate of the above syntax is:
 
 
 
+**Component Life Cycle**
+
+- componentDidMount: Only once when the component is Mounted the very first time.
+
+- componentDidUpdate: Whenever any state / props changed, this life cycle method will be called.
+
+- componentWillUnmount: This will be called before the unmounting of the components. Mainly used to release Network resource, garabase collection, Object memory release. 
+
+
+```
+
+    componentDidMount() {
+		console.log("The component is now mounted!")
+	}
+
+	componentDidUpdate() {
+		console.log("The component just updated")
+	}
+
+
+    componentWillUnmount() {
+		console.log("The component just updated")
+	}
+    
+```
