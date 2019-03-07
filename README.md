@@ -331,11 +331,16 @@ Alternate of the above syntax is:
 
 **Component Life Cycle**
 
-- componentDidMount: Only once when the component is Mounted the very first time.
+- constructor: to initialize state
+
+- render: Method is called when there is any change 
+
+- componentDidMount: Only once when the component is Mounted the very first time. 
+    Right after the component added to the DOM. To Load data from any WEB Service.
 
 - componentDidUpdate: Whenever any state / props changed, this life cycle method will be called.
 
-- componentWillUnmount: This will be called before the unmounting of the components. Mainly used to release Network resource, garabase collection, Object memory release. 
+- componentWillUnmount: This will be called before the unmounting of the components. Mainly used to release Network resource, garabase collection, Object memory release. In short, do any short of clean up.
 
 
 ```
@@ -352,5 +357,5 @@ Alternate of the above syntax is:
     componentWillUnmount() {
 		console.log("The component just updated")
 	}
-    
+
 ```
