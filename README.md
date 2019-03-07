@@ -135,7 +135,7 @@ Note :
     - If we use Class Component then we this.props would contain all the properties passed from the component.
 
     - In case of Function compoment, we do not have the access of "this", hence we need to pass the "props" reference or can use "desctructing"
-    
+
     example :
     //properties - props.name, props.age
     const Message = (props) => {
@@ -326,3 +326,6 @@ Alternate of the above syntax is:
                 }))
         }
 ```
+
+
+
