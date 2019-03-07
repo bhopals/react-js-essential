@@ -485,3 +485,23 @@ ensure that correct type of data is passed to the component. To use this
 
 
 
+
+**Build your Project**
+To deploy you can use Heroku, Netlify, Zite or some other hosting provider
+
+ - First we need to make the production ready build. We can do that using command "npm run build"
+ 
+ - Once build is completed, it can be tested using static server. For that we need to install npm serve
+  " npm install serve -g"
+
+- To serve the build, we need to run "serve -s build" 
+
+- Thats it.
+
+To have the more Advance React tutorial, you can explore
+
+    -   React Recipes
+    -   React : Lifecycles
+    -   React : Components, Context, and Accessibility
+
+
