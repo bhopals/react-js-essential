@@ -37,7 +37,8 @@ dependecy installed .
     
 ### React Elements ###
 There are two ways to create REACT Element. 
-    -   Using React.createElement Method
+
+1. Using React.createElement Method
 
     ```
         const title = React.createElement(
@@ -54,7 +55,7 @@ There are two ways to create REACT Element.
         ```
 
 
-    -   Using JSX(Javascript as XML) - TAG Based Syntax
+2.  Using JSX(Javascript as XML) - TAG Based Syntax
 
         ```
         ReactDOM.render(
