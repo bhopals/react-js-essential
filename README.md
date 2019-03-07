@@ -423,3 +423,37 @@ Alternate of the above syntax is:
     }
 
 ```
+
+
+**DefaultProps**
+The defaults values to be used in case the state or prop objet in null or empty.
+
+```
+Class Syntax - Use the static property provided
+    class Library extends React.Component {
+
+        static defaultProps = {
+            books: [
+                {"title": "Tahoe Tales", "author": "Chet Whitley", "pages": 1000}
+            ]
+        }
+
+        
+
+Function Syntax - Use default arguement syntax :
+
+const Book = ({title="No Title Provided", author= "No Author", pages=0, freeBookmark}) => {
+	return (
+		<section>
+			<h2>{title}</h2>
+			<p>by: {author}</p>
+			<p>Pages: {pages} pages</p>
+			<p>Free Bookmark Today: {freeBookmark ? 'yes!': 'no!'}</p>
+		</section>
+	)
+}
+
+
+
+
+```
