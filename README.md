@@ -359,3 +359,36 @@ Alternate of the above syntax is:
 	}
 
 ```
+
+
+**Loading Data from the API**
+
+```
+    componentDidMount() {
+		this.setState({loading: true})
+		fetch('https://hplussport.com/api/products/order/price/sort/asc/qty/1')
+			.then(data => data.json())
+			.then(data => this.setState({data, loading: false}))
+	}
+
+
+
+     <div>
+            {this.state.hiring ? <Hiring /> : <NotHiring />}
+            {this.state.loading 
+                ? "loading..."
+                : <div>
+                    {this.state.data.map(product => {
+                        return (
+                            <div>
+                                <h3>Library Product of the Week!</h3>
+                                <h4>{product.name}</h4>
+                                <img src={product.image} height={100}/>
+                            </div>
+                        )
+                    })}
+                    
+                </div>
+            }
+        </div>
+```
