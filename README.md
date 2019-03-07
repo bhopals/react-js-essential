@@ -33,3 +33,36 @@ dependecy installed .
 
     
 
+**React Component** 
+There are two ways to create REACT Element. 
+    -   Using React.createElement Method
+
+    ```
+        const title = React.createElement(
+            'h1',
+            {},
+            'Welcome!!'
+        );
+
+        ReactDOM.render(
+           title,
+            document.getElementById('root');
+        )
+
+        ```
+
+
+    -   Using JSX(Javascript as XML) - TAG Based Syntax
+
+        ```
+        ReactDOM.render(
+            <div>
+                <h1>Welcome</h1>
+                <p>Happy to assist!!</p>
+            </div>,
+
+            document.getElementById('root');
+
+        )
+
+        ```
