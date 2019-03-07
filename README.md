@@ -281,3 +281,43 @@ render(
             document.getElementById('root')
         )
 ```
+
+The constructor in Class is used to bind Methods, initialize state and super class constructor.
+
+```
+    class Library extends React.Component {
+
+        constructor(props){
+            super(props);
+            this.state = {
+                open:false
+            }
+            //Method Binding
+            this.toggleOpenClosed = this.toggleOpenClosed.bind(this);
+
+        }  
+        state = { open: false }
+
+        toggleOpenClosed () {
+            //Using Callback
+            this.setState(prevState => ({
+                open: !prevState.open
+            }))
+    }
+```
+
+Alternate of the above syntax is:
+
+```
+        class Library extends React.Component {
+                
+            state = { open: false }
+            
+            //With the use of arrow function, binding of "this is happening automatically"
+            toggleOpenClosed = () => {
+                //Using Callback
+                this.setState(prevState => ({
+                    open: !prevState.open
+                }))
+        }
+```
