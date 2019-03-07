@@ -136,3 +136,11 @@ Note :
     const Message = (props) => {
         
     const Message = ({name, age}) => {
+
+
+
+
+### Props and STATE ###
+
+**Compose Componenets** - This means we have multiple nested components. Parent Component that contains multiple/single child components, and the data in these components have been passed from the top hierarchy 
+to bottom. 
