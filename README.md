@@ -127,10 +127,15 @@ ReactDOM.render(<Message />,document.getElementById('root'));
 **JSX allow us to access dynamic data by using "this.props" object.
 
 Note : 
+
     -   All the REACT Components have "render()" method which describes what would be the body of the component.
+
     -   React Component name should be Capitalize/UpperCase letter to distinguish between regular JSX element and React Element.
+
     - If we use Class Component then we this.props would contain all the properties passed from the component.
+
     - In case of Function compoment, we do not have the access of "this", hence we need to pass the "props" reference or can use "desctructing"
+    
     example :
     //properties - props.name, props.age
     const Message = (props) => {
@@ -142,7 +147,7 @@ Note :
 
 ### Props and STATE ###
 
-**Compose Componenets** - This means we have multiple nested components. Parent Component that contains multiple/single child components, and the data in these components have been passed from the top hierarchy 
+**Compose Components** - This means we have multiple nested components. Parent Component that contains multiple/single child components, and the data in these components have been passed from the top hierarchy 
 to bottom. 
 
 ```
