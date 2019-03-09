@@ -505,3 +505,6 @@ To have the more Advance React tutorial, you can explore
     -   React : Components, Context, and Accessibility
 
 
+
+
+- To practice online React App you can use **https://codesandbox.io/s/new**
